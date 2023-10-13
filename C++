@@ -1,1 +1,27 @@
+1. Write a program to find the factorial of a number using  function
+Solution :
+
+#include <iostream>
+using namespace std;
+
+int calculate(int n);
+
+int main() {
+    int n;
+    cout << "Enter a number to calculate its factorial: ";
+    cin >> n;
+
+    int factorial = calculate(n);
+    cout << "Factorial of " << n << " is " << factorial << endl;
+
+    return 0;
+}
+
+int calculate(int n) {
+    int fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact = fact * i;
+    }
+    return fact;
+}
 
