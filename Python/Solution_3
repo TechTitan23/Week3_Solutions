@@ -1,0 +1,23 @@
+Write a program to generate the Fibonacci series using functions
+Solution:
+
+def fibonacci_series(n):
+    if n <= 0:
+        return "Number of terms should be a positive integer"
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        fib_series = [0, 1]
+        for i in range(2, n):
+            fib_series.append(fib_series[i-1] + fib_series[i-2])
+        return fib_series
+
+terms = int(input("Enter the number of terms for the Fibonacci series: "))
+
+fibonacci_series_list = fibonacci_series(terms)
+
+print("Fibonacci series:")
+for num in fibonacci_series_list:
+    print(num, end=" ")
