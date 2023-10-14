@@ -1,0 +1,32 @@
+//program to convert binary to decimal using  function
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int convert(int n);
+
+int main() {
+    int n;
+    cout << "Enter a binary number: ";
+    cin >> n;
+
+    int decimal = convert(n);
+    cout << "Conversion of " << n << " to decimal is " << decimal << endl;
+
+    return 0;
+}
+
+int convert(int n) {
+    int decimal = 0;
+    int i = 0;
+    int temp = n;
+
+    while (temp != 0) {
+        int remainder = temp % 10;
+        temp = temp / 10;
+        decimal += remainder * pow(2, i);
+        i++;
+    }
+
+    return decimal;
+}
