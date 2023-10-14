@@ -1,0 +1,33 @@
+// program to find Armstrong number using function
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+bool isArmstrong(int n);
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (isArmstrong(n)) {
+        cout << n << " is an Armstrong number." << endl;
+    } else {
+        cout << n << " is not an Armstrong number." << endl;
+    }
+
+    return 0;
+}
+
+bool isArmstrong(int n) {
+    int temp = n;
+    int sum = 0;
+
+    while (n != 0) {
+        int digit = n % 10;
+        sum += pow(digit, 3);
+        n = n / 10;
+    }
+
+    return sum == temp;
+}
