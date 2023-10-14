@@ -1,5 +1,3 @@
-# Quiz 3
-____
 ## 8. Given the following Python code: 
 ```class MyClass: 
 variable = 10 
