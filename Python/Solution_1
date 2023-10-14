@@ -1,0 +1,21 @@
+Write a program to find the factorial of a number using functions
+Solution:
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = int(input("Enter a number:"))
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+elif num == 0:
+    print("The factorial of 0 is 1")
+else:
+    result = factorial(num)
+    print(f"The factorial of {num} is {result}")
+
+def is_palindrome(num):
+    # Convert the number to a string and check if it's equal to its reverse
+    return str(num) == str(num)[::-1]
