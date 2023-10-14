@@ -1,0 +1,12 @@
+Write a program to find a palindrome of a number using functions
+Solution:
+
+def is_palindrome(num):
+    # Convert the number to a string and check if it's equal to its reverse
+    return str(num) == str(num)[::-1]
+
+num = int(input("Enter a number: "))
+if is_palindrome(num):
+    print(f"{num} is a palindrome")
+else:
+    print(f"{num} is not a palindrome")
