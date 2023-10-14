@@ -15,7 +15,3 @@ elif num == 0:
 else:
     result = factorial(num)
     print(f"The factorial of {num} is {result}")
-
-def is_palindrome(num):
-    # Convert the number to a string and check if it's equal to its reverse
-    return str(num) == str(num)[::-1]
